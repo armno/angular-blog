@@ -9,7 +9,7 @@ angular.module('angularBlogApp', [])
       })
       .when('/posts/:slug', {
         templateUrl: 'views/post.html',
-        controller: 'PostCtrl'
+        controller: 'PostDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'
