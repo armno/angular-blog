@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>{{ post.title }}</h1>
+  <h1>{{ post.title }}<small>{{ post.published | checkmark }}</small></h1>
 </div>
 
 <img alt="{{ post.title }}" ng-src="{{ post.thumbnail }}">

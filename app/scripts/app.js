@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularBlogApp', [])
+angular.module('angularBlogApp', ['blogcatFilters'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -15,3 +15,4 @@ angular.module('angularBlogApp', [])
         redirectTo: '/'
       });
   });
+
