@@ -4,5 +4,6 @@
   "thumbnail": "images/html5.png",
   "comments": 8,
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, natus, harum, voluptatem, rem enim hic provident maiores voluptatum minus expedita aperiam delectus iure dolores nemo porro vitae quaerat suscipit. Laborum.",
-	"published": true
+	"published": true,
+	"titles": ["title 1", "title 2", "title 3"]
 }

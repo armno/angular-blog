@@ -8,4 +8,8 @@ angular.module('angularBlogApp')
     $http.get('posts/' + $routeParams.slug + '.json').success(function(data) {
       $scope.post = data;
     });
+
+		$scope.setTitle = function(title) {
+			$scope.mainTitle = title;
+		};
   });
