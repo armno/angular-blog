@@ -3,20 +3,15 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('PostListController', ['$scope', function($scope) {
-		$scope.posts = [{
-			title: 'Post number one',
-			slug: 'post-number-one'
-		},
-		{
-			title: 'Post number two',
-			slug: 'post-number-two'
-		},
-		{
-			title: 'Post number three',
-			slug: 'post-number-three'
-		}];
-  }])
+  controller('PostListController', function($scope, $http) {
+		// get posts data from posts/all.json
+		$http({
+			method: 'GET',		
+			url: 'posts/all.json' 
+		}).success(function(posts) {
+		  $scope.posts = posts;	
+		});
+  })
   .controller('PostDetailController', [function() {
 
   }]);
