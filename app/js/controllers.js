@@ -3,9 +3,20 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
+  controller('PostListController', ['$scope', function($scope) {
+		$scope.posts = [{
+			title: 'Post number one',
+			slug: 'post-number-one'
+		},
+		{
+			title: 'Post number two',
+			slug: 'post-number-two'
+		},
+		{
+			title: 'Post number three',
+			slug: 'post-number-three'
+		}];
   }])
-  .controller('MyCtrl2', [function() {
+  .controller('PostDetailController', [function() {
 
   }]);
