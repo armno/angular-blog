@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularBlogApp', ['blogcatFilters'])
+angular.module('angularBlogApp', ['blogcatFilters', 'blogServices'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
