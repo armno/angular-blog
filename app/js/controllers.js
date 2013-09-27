@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('PostListController', function($scope, $http) {
+  controller('PostListController', ['$scope', '$http', function($scope, $http) {
 		// get posts data from posts/all.json
 		$http({
 			method: 'GET',		
@@ -11,7 +11,12 @@ angular.module('myApp.controllers', []).
 		}).success(function(posts) {
 		  $scope.posts = posts;	
 		});
-  })
-  .controller('PostDetailController', [function() {
-
+  }])
+  .controller('PostDetailController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+		// get post content from slug
+		$http
+			.get('posts/' + $routeParams.postId + '.json')
+			.success(function(post) {
+				$scope.post = post
+			});
   }]);
